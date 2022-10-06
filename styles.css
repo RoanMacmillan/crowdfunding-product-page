@@ -1,0 +1,847 @@
+body {
+
+    margin: 0;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 16px;
+    background-color: hsl(0, 0%, 95%);
+}
+
+
+
+
+main {
+
+    height: 100vh;
+
+
+}
+
+.nav {
+
+    position: relative;
+    
+    height: 400px;
+    
+    
+}
+
+.nav::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    
+    background-image: url(./images/image-hero-desktop.jpg);
+    background-position-y: -20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    padding-top: 25px;
+    filter: brightness(75%);
+
+    
+
+}
+
+.links-container {
+
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    gap: 200px;
+    
+}
+
+.nav-inside {
+
+    position: relative;
+}
+
+.left {
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right{
+
+    display: flex;
+    gap: 50px;
+    margin-left: 220px;
+    align-items: center;
+}
+
+.nav a{
+
+    color: white;
+    cursor: pointer;
+    
+
+}
+
+
+
+
+#link-btn {
+
+    outline: 1px solid white;
+    padding: 12px 28px 12px 28px;
+    border-radius: 5px;
+
+}
+
+
+
+h1 {
+    padding-top: 20px;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+p {
+
+    color: hsl(0, 0%, 48%);
+    line-height: 28px;
+    font-size: .95em;
+}
+
+.card-container {
+    margin: -75px auto;
+    position: relative;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 100px;
+    
+}
+
+.card:first-child {
+
+    text-align: center;
+
+}
+
+.button-container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+}
+
+button {
+
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    font-family: 'Commissioner', sans-serif;
+    border: none;
+    padding: 12px 28px 12px 28px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1em;
+    transition: ease .2s;
+
+}
+
+button:hover {
+
+    background-color: hsl(176, 72%, 28%);
+    cursor: pointer;
+}
+
+#bookmark-btn {
+
+    padding: 12px 24px 12px 27px;
+    border-radius: 0 5px 5px 0;
+    background-color: #c7c7c745;
+    /* color: hsl(176, 50%, 47%); */
+    color: hsl(0, 0%, 48%);
+    font-size: 1em;
+    font-weight: 500;
+
+
+}
+
+#bookmark-btn:hover {
+
+}
+
+#bookmark-btn:hover {
+
+    cursor: pointer;
+}
+
+#bookmark-child {
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#bookmark-icon {
+
+    height: 44px;
+    position: absolute;
+    left: -30px;
+}
+
+#bookmark-icon:hover {
+
+    filter: invert(82%) sepia(8%) saturate(3509%) hue-rotate(119deg) brightness(80%) contrast(73%);
+
+}
+
+.card {
+
+    border-radius: 5px;
+    background-color: white;
+    padding: 40px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+#m-logo {
+
+    position: absolute;
+    top: -25px;
+    left: 330px;
+}
+
+#card-numbers {
+
+
+    display: flex;
+    
+}
+
+strong {
+
+    font-size: 2em;
+}
+
+.number-child {
+
+    
+
+}
+
+small {
+
+    color:hsl(0, 0%, 48%);
+    font-size: .9em;
+}
+
+#first-child {
+
+    padding-right: 35px;
+    border-right: 1px solid hsl(0, 0%, 79%);
+
+
+}
+
+#second-child {
+
+    padding-left: 35px;
+    padding-right: 35px;
+    border-right: 1px solid hsl(0, 0%, 79%);
+}
+
+#third-child {
+
+    padding-left: 35px;
+    
+}
+
+h3 {
+
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.about-child {
+
+    outline: 1px solid hsl(0, 0%, 79%);
+    border-radius: 5px;
+    padding: 30px;
+    
+}
+
+.progress {
+
+    
+    height: 12px;
+    border-radius: 25px;
+    background-color: hsl(0, 0%, 95%);
+    margin-top: 40px;
+}
+
+h4 {
+
+    margin: 0;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.inner-flex {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner-flex-child {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#sold-out-btn {
+
+    background-color: hsl(0, 0%, 79%);
+    cursor: not-allowed;
+
+}
+
+.card-p {
+
+    padding: 10px 0px 10px 0px;
+}
+
+.inner-flex span {
+
+    color: hsl(176, 50%, 47%);
+    font-weight: 500;
+}
+
+
+/* Modals */
+
+
+
+.modals {
+
+    
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Sit on top */
+    align-items: center;
+    justify-content: center;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+
+
+
+.openModal {
+
+    display: flex;
+    
+    
+}
+
+.success-container, .project-container {
+
+    background-color: white;
+    z-index: 200;
+    padding-left: 30px;
+padding-right: 30px;
+border-radius: 5px;
+
+
+}
+
+
+.success-container {
+
+text-align: center;
+width: 500px;
+display: none;
+}
+
+#check {
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#got-btn {
+
+    
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+
+.project-container {
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 800px;
+    position: relative;
+    overflow: scroll;
+    height: 700px;
+    z-index: 99999999;
+}
+
+
+
+
+#close-icon {
+
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.choice-container {
+
+display: flex;
+flex-direction: column;
+gap: 25px;
+
+
+
+}
+
+.choice-child p {
+
+    margin: 0;
+}
+
+.choice-child {
+
+    outline: 1px solid hsl(0, 0%, 79%);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.active {
+
+
+    outline: 5px solid red;
+}
+
+.choice-flex-container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    position: relative;
+}
+
+
+
+
+.choice-flex-child {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    
+}
+
+#test123 {
+
+    color: black;
+}
+
+.choice-flex-child:first-child:hover {
+    color: hsl(176, 50%, 47%);
+
+}
+
+
+
+.choice-flex-child strong {
+
+    font-size: 1.5em;
+}
+
+.choice-flex-child span {
+
+    color: hsl(176, 50%, 47%);
+    font-weight: 500;
+
+
+}
+
+.choice-flex-child label {
+
+    display: flex;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.choice-flex-child input {
+
+    cursor: pointer;
+}
+
+
+.choice-child p {
+
+    margin-left: 36px;
+    margin-bottom: 10px;
+}
+
+
+#heading-para {
+
+    margin: 0;
+    margin-bottom: 25px;
+
+}
+
+#back-heading {
+
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+
+.pledge-container {
+    
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    margin-top: 25px;
+    border-top: 1px solid hsl(0, 0%, 79%);
+    display: none;
+}
+
+
+
+.reward-selection {
+
+}
+
+
+.pledge-child {
+
+    color: hsl(0, 0%, 48%);
+
+}
+
+.pledge-child2 {
+
+    display: flex;
+    gap: 20px;
+    position: relative;
+    
+}
+
+
+
+.dollar {
+    position: absolute;
+    top: 11.7px;
+    left: 15px;
+    color: hsl(0, 0%, 74%);
+}
+
+.pledge-input {
+
+    border: 1px solid hsl(176, 50%, 47%);
+    border-radius: 5px;
+    widtH: 95px;
+    text-align: center;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 1em;
+    font-weighT: 500;
+    
+}
+
+.pledge-input::placeholder {
+
+    color: hsl(0, 0%, 74%);
+
+}
+
+.pledge-input:focus {
+
+    
+    outline: 1px solid hsl(176, 50%, 47%);
+}
+
+.right-right {
+
+    display: none;
+}
+
+
+#notav {
+
+    filter: opacity(40%);
+    cursor: not-allowed !important;
+    
+}
+
+#notallowed:hover {
+
+    cursor: not-allowed !important;
+
+}
+
+#soldoutReward:hover {
+
+    cursor: not-allowed !important;
+}
+
+
+
+.display-change {
+
+
+    display: flex;
+}
+
+.style-change {
+    border: 2px solid hsl(176, 50%, 47%);
+
+    
+}
+
+.error-outline {
+
+    border: 1px solid red;
+}
+
+/* .error-msg {
+
+    display: none !important;
+}
+
+
+@media screen and (min-width: 650px) {
+
+
+    .error-msg {
+        display: none;
+        align-self: center;
+        color: red;
+    }
+
+} */
+
+
+@media screen and (max-width: 1200px) {
+
+
+    .links-container  {
+
+        gap: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 490px) {
+
+    .links-container {
+
+        justify-content: space-between;
+        padding-left: 25px;
+        padding-righT: 25px;
+    }
+
+
+    .project-container {
+
+        width: 280px;
+        height: 70%;
+        overflow: scroll;
+    }
+
+    .choice-flex-child label {
+
+        flex-direction: column;
+        gap: 10px;
+        
+        
+    }
+
+    .choice-child {
+
+        position: relative;
+        
+        
+    }
+
+    .choice-flex-child:last-child {
+
+        outline: 1px solid red;
+        display: none;
+    }
+
+    .p-desc {
+
+        
+    }
+
+    .pledge-container {
+
+        flex-direction: column;
+        border-top: 1px solid hsl(0, 0%, 74%);
+        gAP: 15PX;
+        
+    }
+
+
+    .choice-flex-container {
+
+        flex-direction: column;
+       align-items: flex-start; 
+    }
+
+    
+    
+    
+}
+
+@media screen and (max-width: 1000px) {
+
+
+
+.card-container {
+
+
+    width: 340px;
+    padding-bottom: 50px;
+}
+
+.card {
+
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+#m-logo {
+
+    left: 145px;
+}
+
+#bookmark-btn {
+
+    display: none;
+}
+
+h1 {
+
+    font-size: 1.5em;
+}
+
+.button-container {
+
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+
+#bookmark-icon {
+
+    left: -43px;
+}
+
+#card-numbers {
+
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+
+
+#first-child, #second-child, #third-child {
+
+
+    margin: 0;
+    padding: 0;
+    border-right: none;
+
+}
+
+#first-child, #second-child {
+
+    border-bottom: 1px solid hsl(0, 0%, 74%);
+    padding-bottom: 25px;
+    width: 60%;
+    margin: 0 auto;
+    
+}
+
+
+.inner-flex {
+
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.inner-flex-child {
+
+    padding-bottom: 15px;
+}
+
+.card button {
+
+width: 160px;
+
+}
+
+button:first-child {
+
+    width: 100%;
+    padding-left:50px;
+    padding-right:50px;
+}
+
+.links-container {
+
+    gap: 0;
+    
+    
+}
+
+.right {
+display: none;
+}
+
+.right-right {
+
+    display: flex;
+    cursor: pointer;
+}
+
+.nav::before {
+
+    background-image: url('./images/image-hero-mobile.jpg');
+}
+
+.success-container {
+
+    width: 280px;
+
+}
+
+
+}
