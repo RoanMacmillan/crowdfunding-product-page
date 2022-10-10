@@ -13,23 +13,23 @@ main {
 
     height: 100vh;
 
-
+    position: relative;
 }
+
 
 .nav {
 
     position: relative;
-    
     height: 400px;
-    
-    
+
+
 }
 
 .nav::before {
     content: "";
     width: 100%;
     height: 100%;
-    
+
     background-image: url(./images/image-hero-desktop.jpg);
     background-position-y: -20px;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@ main {
     padding-top: 25px;
     filter: brightness(75%);
 
-    
+
 
 }
 
@@ -47,8 +47,8 @@ main {
     display: flex;
     justify-content: space-around;
     padding-top: 50px;
-    gap: 200px;
     
+
 }
 
 .nav-inside {
@@ -63,7 +63,7 @@ main {
     cursor: pointer;
 }
 
-.right{
+.right {
 
     display: flex;
     gap: 50px;
@@ -71,11 +71,11 @@ main {
     align-items: center;
 }
 
-.nav a{
+.nav a {
 
     color: white;
     cursor: pointer;
-    
+
 
 }
 
@@ -113,7 +113,7 @@ p {
     flex-direction: column;
     gap: 20px;
     padding-bottom: 100px;
-    
+
 }
 
 .card:first-child {
@@ -150,47 +150,68 @@ button:hover {
     cursor: pointer;
 }
 
-#bookmark-btn {
-
-    padding: 12px 24px 12px 27px;
-    border-radius: 0 5px 5px 0;
-    background-color: #c7c7c745;
-    /* color: hsl(176, 50%, 47%); */
-    color: hsl(0, 0%, 48%);
-    font-size: 1em;
-    font-weight: 500;
 
 
+#bookmark {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    width: 180px;
+    border-radius: 25px 5px 5px 25px;
+    background-color: hsl(0, 0%, 95%);
 }
 
-#bookmark-btn:hover {
-
+#bookmark svg {
+    position: relative;
+    width: 56px;
 }
 
-#bookmark-btn:hover {
+#bookmark circle {
+    transition: fill 0.25s ease;
+}
 
+#bookmark p {
+    font: 500 16px 'Commissioner', sans-serif;
+    color: hsl(0, 0%, 50%);
+    display: block;
+    width: 124px;
+    transition: color 0.25s ease;
+}
+
+#bookmark:hover {
     cursor: pointer;
 }
 
-#bookmark-child {
-
-    display: flex;
-    align-items: center;
-    position: relative;
+#bookmark:hover circle {
+    fill: hsl(0, 0%, 25%);
 }
 
-#bookmark-icon {
-
-    height: 44px;
-    position: absolute;
-    left: -30px;
+#bookmark:hover p {
+    color: hsl(0, 0%, 65%) !important;
 }
 
-#bookmark-icon:hover {
-
-    filter: invert(82%) sepia(8%) saturate(3509%) hue-rotate(119deg) brightness(80%) contrast(73%);
-
+#bookmark.active circle {
+    fill: hsl(176, 50%, 47%) !important;
 }
+
+#bookmark.active p {
+    color: hsl(176, 50%, 47%) !important;
+}
+
+#bookmark.active:hover circle {
+    fill: hsl(176, 72%, 28%);
+}
+
+#bookmark.active:hover p {
+    color: hsl(176, 72%, 28%);
+}
+
+
+
+
 
 .card {
 
@@ -203,16 +224,25 @@ button:hover {
 
 #m-logo {
 
-    position: absolute;
-    top: -25px;
-    left: 330px;
+    width: 50px;
+}
+
+.logo-container {
+    
+    margin-top: -63px;
+    
 }
 
 #card-numbers {
 
 
     display: flex;
-    
+
+}
+
+.mobile-menu{
+
+    display: none;
 }
 
 strong {
@@ -220,15 +250,11 @@ strong {
     font-size: 2em;
 }
 
-.number-child {
-
-    
-
-}
+.number-child {}
 
 small {
 
-    color:hsl(0, 0%, 48%);
+    color: hsl(0, 0%, 48%);
     font-size: .9em;
 }
 
@@ -250,7 +276,7 @@ small {
 #third-child {
 
     padding-left: 35px;
-    
+
 }
 
 h3 {
@@ -264,17 +290,34 @@ h3 {
     outline: 1px solid hsl(0, 0%, 79%);
     border-radius: 5px;
     padding: 30px;
-    
+
 }
 
-.progress {
 
-    
-    height: 12px;
-    border-radius: 25px;
-    background-color: hsl(0, 0%, 95%);
+
+
+
+
+
+
+
+.slider__progress {
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 1rem;
+    height: .75rem;
     margin-top: 40px;
+
 }
+
+.slider__progress-inner {
+    width: 79%;
+    background-color: #3cb4ac;
+    border-radius: 1rem;
+    height: 100%;
+    max-width: 100%;
+}
+
 
 h4 {
 
@@ -327,19 +370,25 @@ h4 {
 
 .modals {
 
-    
-    position: fixed; /* Stay in place */
-    z-index: 0; /* Sit on top */
+
+    position: fixed;
+    /* Stay in place */
+    z-index: 0;
+    /* Sit on top */
     align-items: center;
     justify-content: center;
     display: none;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
     
+    /* Black w/ opacity */
 }
 
 
@@ -348,17 +397,18 @@ h4 {
 .openModal {
 
     display: flex;
-    
-    
+
+
 }
 
-.success-container, .project-container {
+.success-container,
+.project-container {
 
     background-color: white;
     z-index: 200;
     padding-left: 30px;
-padding-right: 30px;
-border-radius: 5px;
+    padding-right: 30px;
+    border-radius: 5px;
 
 
 }
@@ -366,9 +416,9 @@ border-radius: 5px;
 
 .success-container {
 
-text-align: center;
-width: 500px;
-display: none;
+    text-align: center;
+    width: 500px;
+    display: none;
 }
 
 #check {
@@ -379,7 +429,7 @@ display: none;
 
 #got-btn {
 
-    
+
     margin-top: 10px;
     margin-bottom: 40px;
 }
@@ -396,8 +446,7 @@ display: none;
     z-index: 99999999;
 }
 
-
-
+.pledge-child2 {}
 
 #close-icon {
 
@@ -409,9 +458,9 @@ display: none;
 
 .choice-container {
 
-display: flex;
-flex-direction: column;
-gap: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 
 
 
@@ -427,19 +476,17 @@ gap: 25px;
     outline: 1px solid hsl(0, 0%, 79%);
     border-radius: 5px;
     padding: 20px;
+
 }
 
-.active {
 
 
-    outline: 5px solid red;
-}
 
 .choice-flex-container {
 
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     position: relative;
 }
 
@@ -453,7 +500,7 @@ gap: 25px;
     gap: 12px;
     margin-bottom: 15px;
     margin-top: 10px;
-    
+
 }
 
 #test123 {
@@ -516,20 +563,19 @@ gap: 25px;
 
 
 .pledge-container {
-    
+
     justify-content: space-between;
     align-items: center;
     padding-top: 25px;
     margin-top: 25px;
     border-top: 1px solid hsl(0, 0%, 79%);
     display: none;
-}
-
-
-
-.reward-selection {
 
 }
+
+
+
+.reward-selection {}
 
 
 .pledge-child {
@@ -543,7 +589,7 @@ gap: 25px;
     display: flex;
     gap: 20px;
     position: relative;
-    
+
 }
 
 
@@ -564,7 +610,7 @@ gap: 25px;
     font-family: 'Commissioner', sans-serif;
     font-size: 1em;
     font-weighT: 500;
-    
+
 }
 
 .pledge-input::placeholder {
@@ -575,7 +621,7 @@ gap: 25px;
 
 .pledge-input:focus {
 
-    
+
     outline: 1px solid hsl(176, 50%, 47%);
 }
 
@@ -589,7 +635,7 @@ gap: 25px;
 
     filter: opacity(40%);
     cursor: not-allowed !important;
-    
+
 }
 
 #notallowed:hover {
@@ -613,8 +659,9 @@ gap: 25px;
 
 .style-change {
     border: 2px solid hsl(176, 50%, 47%);
+    outline: none;
 
-    
+
 }
 
 .error-outline {
@@ -643,7 +690,7 @@ gap: 25px;
 @media screen and (max-width: 1200px) {
 
 
-    .links-container  {
+    .links-container {
 
         gap: 0;
     }
@@ -655,9 +702,8 @@ gap: 25px;
 
     .links-container {
 
-        justify-content: space-between;
-        padding-left: 25px;
-        padding-righT: 25px;
+        justify-content: space-around;
+        
     }
 
 
@@ -672,15 +718,15 @@ gap: 25px;
 
         flex-direction: column;
         gap: 10px;
-        
-        
+
+
     }
 
     .choice-child {
 
         position: relative;
-        
-        
+
+
     }
 
     .choice-flex-child:last-child {
@@ -689,159 +735,280 @@ gap: 25px;
         display: none;
     }
 
-    .p-desc {
-
-        
-    }
+    .p-desc {}
 
     .pledge-container {
 
         flex-direction: column;
         border-top: 1px solid hsl(0, 0%, 74%);
         gAP: 15PX;
-        
+
     }
 
 
     .choice-flex-container {
 
         flex-direction: column;
-       align-items: flex-start; 
+        align-items: flex-start;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 750px) {
+
+
+    .links-container {
+
+        justify-content: center;
+    }
+
+    .card-container {
+
+        width: 90vw;
+    }
+
+    .hide {
+
+        display: none;
     }
 
     
+
     
-    
-}
 
-@media screen and (max-width: 1000px) {
-
-
-
-.card-container {
-
-
-    width: 340px;
-    padding-bottom: 50px;
-}
-
-.card {
-
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
 
-#m-logo {
+@media screen and (max-width: 530px) {
 
-    left: 145px;
-}
 
-#bookmark-btn {
+   .right {
+
+    display: none;
+   }
+
+   #bookmark p {
 
     display: none;
 }
 
-h1 {
+#bookmark {
 
-    font-size: 1.5em;
+    width:57px;
+    background: none;
+} 
+  
+
+#first-child {
+
+    padding-right: 15px;
+    border-right: 1px solid hsl(0, 0%, 79%);
+
+
 }
 
-.button-container {
+#second-child {
 
-    justify-content: space-between;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid hsl(0, 0%, 79%);
+}
+
+#third-child {
+
+    padding-left: 20px;
+
+}
+#main-button {
+    padding-left: 45px !important;
+    padding-right: 45px !important;
+}
+}
+
+@media screen and (max-width: 490px) {
+
+
+   
+
+    .left, .right-right {
+
+        z-index: 9999999999999999999999;
+    }
+
+    .links-container {
+
+        justify-content: space-around;
+    }
+    .mobile-menu {
+
+        
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        z-index: 5;
+        top: 100px;
+        width: 290px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-radius: 5px;
+    }
+
+    .mobile-menu a {
+        font-family: 'Commissioner', sans-serif;
+        font-size: 1.1em;
+        font-weight: 500;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: black;
+    }
+
+    #hamburger-close {
+
+        display: none;
+    }
+
+    #middle {
+
+        border-top: 1px solid hsl(0, 0%, 88%);
+        border-bottom: 1px solid hsl(0, 0%, 88%);
+
+    }
+
+    .mobile-toggle {
+
+        display: flex;
+    }
+
+    .mobile-close {
+
+        display: none;
+    }
+
     
-}
 
-#bookmark-icon {
-
-    left: -43px;
-}
-
-#card-numbers {
-
-    flex-direction: column;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    gap: 25px;
-}
+  
+    .card-container {
 
 
+        width: 340px;
+        padding-bottom: 50px;
+    }
 
-#first-child, #second-child, #third-child {
+    .card {
 
-
-    margin: 0;
-    padding: 0;
-    border-right: none;
-
-}
-
-#first-child, #second-child {
-
-    border-bottom: 1px solid hsl(0, 0%, 74%);
-    padding-bottom: 25px;
-    width: 60%;
-    margin: 0 auto;
-    
-}
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 
 
-.inner-flex {
 
-    flex-direction: column;
-    gap: 10px;
-}
+   
+
+    h1 {
+
+        font-size: 1.5em;
+    }
+
+    .button-container {
+
+        justify-content: space-between;
+        padding-left: 5px;
+        padding-right: 5px;
+        
+    }
+
+   
+
+    #card-numbers {
+
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        gap: 25px;
+    }
 
 
-.inner-flex-child {
 
-    padding-bottom: 15px;
-}
+    #first-child,
+    #second-child,
+    #third-child {
 
-.card button {
 
-width: 160px;
+        margin: 0;
+        padding: 0;
+        border-right: none;
 
-}
+    }
 
-button:first-child {
+    #first-child,
+    #second-child {
 
-    width: 100%;
-    padding-left:50px;
-    padding-right:50px;
-}
+        border-bottom: 1px solid hsl(0, 0%, 74%);
+        padding-bottom: 25px;
+        width: 60%;
+        margin: 0 auto;
 
-.links-container {
+    }
 
-    gap: 0;
-    
-    
-}
 
-.right {
-display: none;
-}
+    .inner-flex {
 
-.right-right {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-    display: flex;
-    cursor: pointer;
-}
 
-.nav::before {
+    .inner-flex-child {
 
-    background-image: url('./images/image-hero-mobile.jpg');
-}
+        padding-bottom: 15px;
+    }
 
-.success-container {
+    .card button {
 
-    width: 280px;
+        width: 160px;
 
-}
+    }
+
+    button:first-child {
+
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .links-container {
+
+        gap: 0;
+
+
+    }
+
+    .right {
+
+        display: none;
+    }
+
+    .right-right {
+
+        display: flex;
+        cursor: pointer;
+        
+    }
+
+    .nav::before {
+
+        background-image: url('./images/image-hero-mobile.jpg');
+    }
+
+    .success-container {
+
+        width: 280px;
+
+    }
 
 
 }
