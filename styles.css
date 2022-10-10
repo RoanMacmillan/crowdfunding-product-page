@@ -29,7 +29,7 @@ main {
     content: "";
     width: 100%;
     height: 100%;
-
+    
     background-image: url(./images/image-hero-desktop.jpg);
     background-position-y: -20px;
     background-repeat: no-repeat;
@@ -47,6 +47,7 @@ main {
     display: flex;
     justify-content: space-around;
     padding-top: 50px;
+    width: 100vw;
     
 
 }
@@ -103,6 +104,13 @@ p {
     color: hsl(0, 0%, 48%);
     line-height: 28px;
     font-size: .95em;
+}
+
+.span-text {
+
+    color: black !important;
+    font-weight: 600 !important;
+    font-size: 1em;
 }
 
 .card-container {
@@ -279,7 +287,7 @@ small {
 
 }
 
-h3 {
+h2 {
 
     margin-top: 0;
     margin-bottom: 30px;
@@ -425,6 +433,10 @@ h4 {
 
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+h3 {
+
 }
 
 #got-btn {
@@ -765,16 +777,18 @@ h4 {
         justify-content: center;
     }
 
+    
     .card-container {
 
         width: 90vw;
     }
-
+ 
     .hide {
 
         display: none;
-    }
+    } 
 
+  
     
 
     
@@ -784,11 +798,11 @@ h4 {
 
 @media screen and (max-width: 530px) {
 
-
+/* 
    .right {
 
     display: none;
-   }
+   } */
 
    #bookmark p {
 
